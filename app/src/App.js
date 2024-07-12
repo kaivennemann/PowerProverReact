@@ -1,35 +1,16 @@
-import './styles/App.css';
-import Panel from './components/panel.js';
+import './styles/App.css'
+import QueryContainer from './components/QueryContainer.js'
+import PageHeader from './components/PageHeader.js'
+import PageFooter from './components/PageFooter.js'
 
-function MyButton() {
-  function handleClick() {
-    alert("Clicked!")
-  }
-  return (
-    <button onClick={handleClick}>
-      I'm a button!
-    </button>
-  );
-}
-
-function App() {
+const App = () => {
   return (
     <div className="app">
-      <h1>Home Page</h1>
-      <MyButton />
-      <div className="panel-container">
-        
-        <Panel>
-          <p> Panel 1 </p>
-        </Panel>
-
-        <Panel>
-          <p> Panel 2 </p>
-        </Panel>
-
-      </div>
+      <PageHeader />
+      <QueryContainer />
+      <PageFooter />
     </div>
   )
 }
 
-export default App;
+export default App
