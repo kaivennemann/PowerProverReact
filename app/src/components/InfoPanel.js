@@ -1,4 +1,5 @@
-import '../styles/Panel.css';
+import React from 'react'
+import '../styles/InfoPanel.css';
 
 function InfoPanelHeader({ panelName }) {
     return (

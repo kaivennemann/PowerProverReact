@@ -1,0 +1,28 @@
+.info-panel {
+  background-color: rgb(212, 238, 247);
+  border-radius: 10px;
+  padding: 0px;
+  width: 92%;
+  max-width: 800px;
+  box-sizing: border-box;
+  margin: 10px auto
+}
+
+.info-panel-header {
+  background-color: lightgray;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 100%;
+  padding: 0px 15px; /* vertical and horizontal padding */
+  box-sizing: border-box;
+  font-size: 12px;
+  font-style: italic;
+  text-align: left;
+  line-height: 30px;
+}
+
+.info-panel-contents {
+  padding-top: 5px;
+  padding-bottom: 15px;
+  box-sizing: border-box; /* ensures that the width includes padding and borders */
+}
