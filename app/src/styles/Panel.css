@@ -1,0 +1,13 @@
+.panel {
+  background-color: rgb(212, 238, 247);
+  border-radius: 15px;
+  padding: 20px;
+  width: 60%;
+  max-width: 800px;
+  box-sizing: border-box;
+  margin: 0 auto
+}
+
+.panel-container {
+  
+}
