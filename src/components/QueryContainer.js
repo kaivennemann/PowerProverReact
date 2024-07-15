@@ -1,6 +1,7 @@
 import React from 'react'
 import SearchBar from './SearchBar'
 import ResultsContainer from './ResultsContainer'
+import '../styles/QueryContainer.css'
 
 function QueryContainer() {
   return (

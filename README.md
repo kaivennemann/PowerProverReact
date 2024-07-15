@@ -13,7 +13,7 @@ Some experimentation with React.js.
 
 ## Resources
 
-
+- flexbox: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 
 
 

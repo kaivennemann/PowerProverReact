@@ -1,12 +1,12 @@
 import React from 'react'
 
 
-function GoButton() {
+function GoButton({className}) {
   function handleClick() {
     alert("Clicked!")
   }
   return (
-    <button onClick={handleClick}>
+    <button className={className} onClick={handleClick}>
       GO!
     </button>
   )
@@ -15,7 +15,12 @@ function GoButton() {
 
 function SearchBar() {
   return (
-    <div>SearchBar</div>
+    <div className='search-bar'>
+      <form className='search-form'>
+        <input className='search-bar-input' type='text' placeholder='Enter a formula, e.g. a and b or !c' />
+      </form>
+      <GoButton className='search-bar-button' />
+    </div>
   )
 }
 

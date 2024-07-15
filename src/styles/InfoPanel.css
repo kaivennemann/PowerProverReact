@@ -2,8 +2,6 @@
   background-color: rgb(212, 238, 247);
   border-radius: 10px;
   padding: 0px;
-  width: 92%;
-  max-width: 800px;
   box-sizing: border-box;
   margin: 10px auto
 }
@@ -12,7 +10,6 @@
   background-color: lightgray;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  width: 100%;
   padding: 0px 15px; /* vertical and horizontal padding */
   box-sizing: border-box;
   font-size: 12px;
