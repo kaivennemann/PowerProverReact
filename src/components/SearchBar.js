@@ -7,7 +7,7 @@ function GoButton({className}) {
   }
   return (
     <button className={className} onClick={handleClick}>
-      GO!
+      ⇒
     </button>
   )
 }

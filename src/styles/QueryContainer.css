@@ -50,6 +50,9 @@
 }
 
 .search-bar-button {
-  background-color: white;
-  border-radius: 10px;
+  background-color: rgb(171, 27, 171);
+  color: rgb(244, 244, 244);
+  border-radius: 8px;
+  border:rgb(171, 27, 171);
+  cursor: pointer;
 }
