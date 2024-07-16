@@ -13,7 +13,7 @@ function GoButton({className}) {
 }
   
 
-function SearchBar() {
+function SearchBar({ className }) {
   const [inputValue, setInputValue] = useState('')
   const inputRef = useRef(null)
 
@@ -66,7 +66,7 @@ function SearchBar() {
   }
 
   return (
-    <div className='search-bar'>
+    <div className={className}>
       <form className='search-form'>
         <input
           className='search-bar-input'

@@ -1,8 +1,8 @@
 import React from 'react'
 
-function PageHeader() {
+function PageHeader({ className }) {
   return (
-    <div className="page-header">
+    <div className={className}>
         <h1>PowerProver</h1>
     </div>
   )

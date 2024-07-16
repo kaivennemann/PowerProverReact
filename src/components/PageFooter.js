@@ -1,8 +1,8 @@
 import React from 'react'
 
-function PageFooter() {
+function PageFooter({ className }) {
   return (
-    <div className="page-footer">
+    <div className={className}>
         <p>© PowerProver</p>
     </div>
   )

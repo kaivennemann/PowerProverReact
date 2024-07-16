@@ -1,28 +1,34 @@
 import React from 'react'
 import '../styles/InfoPanel.css';
 
-function InfoPanelHeader({ panelName }) {
+function InfoPanelHeader({ className, panelName }) {
     return (
         <div className='info-panel-header'>
-            <p>{panelName}</p>
+            <div className={className}>
+                <p>{panelName}</p>
+            </div>
         </div>
     )
 }
 
-function InfoPanelContents() {
+function InfoPanelContents({ className }) {
     return (
         <div className='info-panel-contents'>
-            <p>Panel Contents</p>
+            <div className={className}>
+                <p>Panel Contents</p>
+            </div>
         </div>
     )
 }
 
 
-function InfoPanel({ panelName }) {
+function InfoPanel({ className, panelName }) {
     return (
         <div className="info-panel">
-            <InfoPanelHeader panelName={panelName}/>
-            <InfoPanelContents />
+            <div className={className}>
+                <InfoPanelHeader panelName={panelName}/>
+                <InfoPanelContents className={`${className}-contents`} />
+            </div>
         </div>
     )
 }

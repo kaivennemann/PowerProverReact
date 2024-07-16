@@ -6,9 +6,9 @@ import PageFooter from './components/PageFooter.js'
 const App = () => {
   return (
     <div className="app">
-      <PageHeader />
-      <QueryContainer />
-      <PageFooter />
+      <PageHeader className='page-header' />
+      <QueryContainer className='query-container' />
+      <PageFooter className='page-footer' />
     </div>
   )
 }

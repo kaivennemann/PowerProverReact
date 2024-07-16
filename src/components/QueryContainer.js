@@ -3,11 +3,11 @@ import SearchBar from './SearchBar'
 import ResultsContainer from './ResultsContainer'
 import '../styles/QueryContainer.css'
 
-function QueryContainer() {
+function QueryContainer({ className }) {
   return (
-    <div className="query-container">
-        <SearchBar />
-        <ResultsContainer />
+    <div className={className}>
+        <SearchBar className='search-bar' />
+        <ResultsContainer className='results-container' />
     </div>
   )
 }
