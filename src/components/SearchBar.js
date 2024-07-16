@@ -54,8 +54,8 @@ function SearchBar() {
       [/not|!/, '¬'],
       [/ ?(and|&)/, ' ∧ '],
       [/ ?(or|\|)/, ' ∨ '],
-      [/ ?<\->/, ' ↔ '],
-      [/ ?\->/, ' → '],
+      [/ ?<->/, ' ↔ '],
+      [/ ?->/, ' → '],
       [/[^a-zA-Z¬∧∨→↔()<\- ]/g, ''] // remove non-letters
     ].reduce((acc, [old, repl]) => acc.replace(old, repl), curVal)
 
