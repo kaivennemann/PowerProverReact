@@ -10,12 +10,17 @@ html, body {
   flex-direction: column;
   min-height: 100vh;
   text-align: center;
+  font-family: 'Courier New', Courier, monospace;
   box-sizing: border-box;
 }
 
 .page-header {
   box-sizing: border-box;
   text-align: center;
+  font-family: 'Courier New';
+  font-size: xx-large;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+  color: white;
   flex: 1;
 }
 
