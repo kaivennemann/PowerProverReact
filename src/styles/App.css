@@ -15,6 +15,7 @@ html, body {
 }
 
 .page-header {
+  background: linear-gradient(to top, rgb(87, 13, 87, 0.0), rgb(87, 13, 87, 0.7));
   box-sizing: border-box;
   text-align: center;
   font-family: 'Courier New';
@@ -25,7 +26,7 @@ html, body {
 }
 
 .page-footer {
-  background-color: rgb(87, 13, 87);;
+  background: linear-gradient(to bottom, rgb(87, 13, 87, 0.0), rgb(87, 13, 87, 1.0));
   color: white;
   padding: 2px 0;
   text-align: center;
