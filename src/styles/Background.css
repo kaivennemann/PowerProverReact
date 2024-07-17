@@ -22,6 +22,6 @@
   justify-content: center;
   font-size: 5rem;
   color: rgba(255, 255, 255, 0.8);
-  animation: textMove 3s linear infinite;
+  animation: textMove 3s linear infinite reverse;
   perspective: 1000px;
 }
