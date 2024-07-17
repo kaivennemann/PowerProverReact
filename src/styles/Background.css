@@ -1,21 +1,3 @@
-:root {
-  --angle: 240deg;
-  --delay: 0s;
-}
-
-@keyframes textMove {
-  0% {
-    transform: translateX(0px) translateY(0px) translateZ(-1000px) scale(0.1);
-    opacity: 0.1;
-    filter: blur(3px);
-  }
-  100% {
-    transform: translateX(calc(2000px * cos(var(--angle)))) translateY(calc(2000px * sin(var(--angle)))) translateZ(1000px) scale(4);
-    opacity: 0.9;
-    filter: blur(0px);
-  }
-}
-
 .animated-text {
   position: absolute;
   width: 100%;
@@ -25,6 +7,6 @@
   justify-content: center;
   font-size: 5rem;
   color: rgba(255, 255, 255, 0.8);
-  animation: textMove 20s ease-out var(--delay) infinite;
   perspective: 1000px;
+  z-index: 1;
 }
