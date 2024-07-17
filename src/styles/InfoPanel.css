@@ -1,5 +1,5 @@
 .info-panel {
-  background-color: rgb(212, 238, 247);
+  background-color: rgb(244, 244, 244);
   border-radius: 10px;
   padding: 0px;
   box-sizing: border-box;
@@ -8,13 +8,15 @@
 }
 
 .info-panel-header {
-  background-color: lightgray;
+  background-color: rgb(152, 112, 152);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   padding: 0px 15px; /* vertical and horizontal padding */
   box-sizing: border-box;
   font-size: 12px;
   font-style: italic;
+  font-weight: bold;
+  color: white;
   text-align: left;
   line-height: 30px;
 }
