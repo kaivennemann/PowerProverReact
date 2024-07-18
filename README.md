@@ -1,11 +1,23 @@
-# React
+# PowerProverReact
 
-Some experimentation with React.js.
+This project utilizes React.js to implement the frontend for the PowerProver[https://github.com/kaivennemann/PowerProver] project.
 
+
+## Design Choices
+
+- animated text for background
+- minimalistic interface
 
 ## To Dos
 
-
+- add routing for searches (%)
+- clickable helpful widget with expandable info panels
+    - About (i)
+    - Symbols (alpha beta gamma, keyboard)
+    - Examples (e.g., example formula)
+    - I'm feeling lucky (gold coin)
+- search animation
+- query result visualization
 
 ## Project History
 

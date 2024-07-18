@@ -13,7 +13,7 @@ function precomputeAnimation() {
       const angle = Math.random() * 360
       const x = 500 * Math.cos(angle * (Math.PI / 180))
       const y = 500 * Math.sin(angle * (Math.PI / 180))
-      const startZ = -100
+      const startZ = 0
       const endZ = 1000
       const endScale = 7
       const duration = 30 + 20 * Math.random()
