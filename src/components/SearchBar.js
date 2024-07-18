@@ -15,7 +15,7 @@ function GoButton({className}) {
 
 function SearchBar({ className }) {
   const [inputValue, setInputValue] = useState('')
-  const inputRef = useRef(null)
+  const inputRef = useRef(null) // inputRef is set once passed to component as ref
 
   function handleKeyDown(event) {
     const cursorPos = event.target.selectionStart

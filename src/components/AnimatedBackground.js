@@ -1,12 +1,11 @@
 
 import React, { useEffect } from 'react'
 import * as d3 from 'd3'
+import randomFormula from '../utils/FormulaGenerator.js'
 import '../styles/Background.css'
 
 function precomputeAnimation() {
   const textElements = d3.selectAll('.animated-text')
-
-  // TODO: deal with slow UI
   
   textElements.each(function() {
     const element = d3.select(this)
@@ -22,14 +21,14 @@ function precomputeAnimation() {
 
       element
         .style('font-size', '5rem')
-        .style('opacity', 0.3)
+        .style('opacity', 0.7)
         .style('filter', 'blur(3px)')
         .style('transform', `scale(0.1) translateZ(${startZ}px)`)
         .transition()
         .delay(delay * 1000)
         .duration(duration * 1000)
         .ease(d3.easeLinear)
-        .style('opacity', 0.7)
+        .style('opacity', 0)
         .style('filter', 'blur(0px)')
         .style('transform', `scale(${endScale}) translate(${x}px, ${y}px) translateZ(${endZ}px)`)
         .on('end', animate)
@@ -38,40 +37,6 @@ function precomputeAnimation() {
     animate()
   })
 }
-
-// A bunch of random formulas
-const words = [
-  "¬(P ∧ Q) → (¬P ∨ ¬Q)",
-  "∀x (P(x) ∨ Q(x)) ↔ (∀x P(x) ∨ ∀x Q(x))",
-  "∃x (P(x) ∧ Q(x)) → (∃x P(x) ∧ ∃x Q(x))",
-  "(P ∨ Q) → (Q ∨ P)",
-  "∀x (P(x) → Q(x)) → (∀x P(x) → ∀x Q(x))",
-  "(¬P ∨ Q) ∧ (P ∨ ¬Q)",
-  "(P ↔ Q) ↔ (¬P ↔ ¬Q)",
-  "¬(P ∧ ¬P)",
-  "(P ∧ Q) → P",
-  "(P ∧ Q) → Q",
-  "P → (Q → P)",
-  "(P ∨ Q) ∧ ¬Q → P",
-  "¬(P ∧ Q) ↔ (¬P ∨ ¬Q)",
-  "(P → Q) → (¬Q → ¬P)",
-  "∃x P(x) → ∀x P(x)",
-  "∀x (a(x) → b(x)) → (∃x a(x) → ∃x b(x))",
-  "a ∧ (b ∨ c) ↔ (a ∧ b) ∨ (a ∧ c)",
-  "¬(a ↔ ¬a)",
-  "(a → b) ↔ (¬a ∨ b)",
-  "a ↔ ¬¬a",
-  "∀x (a(x) ∧ b(x)) → ∀x a(x)",
-  "∃x (a(x) ∧ b(x)) → ∃x a(x)",
-  "(a ∧ ¬a) → b",
-  "a ∧ (b ∨ ¬b)",
-  "(a ∨ b) → (b ∨ c) ↔ ((a ∨ b) ∨ c)",
-  "¬∀x a(x) → ∃x ¬a(x)",
-  "∀x (a(x) → b(x)) ↔ (¬∃x (a(x) ∧ ¬b(x)))",
-  "a → (b → (a ∧ b))",
-  "∀x (a(x) ∨ b(x)) → ∀x a(x) ∨ ∀x b(x)",
-  "¬∃x a(x) ↔ ∀x ¬a(x)"
-]
 
 function AnimatedText({ text }) {
   return (
@@ -82,12 +47,12 @@ function AnimatedText({ text }) {
 }
 
 function AnimatedBackground() {
-  useEffect(() => precomputeAnimation, [])
+  useEffect(precomputeAnimation, [])
 
   return (
     <div className='animated-background'>
-      {words.map((word, i) => (
-        <AnimatedText text={word} key={i} />
+      {Array.from({length: 10}, (_, i) => (
+        <AnimatedText text={randomFormula()} key={i+1} />
       ))}
     </div>
   )
