@@ -10,6 +10,7 @@ This project utilizes React.js to implement the frontend for the PowerProver[htt
 
 ## To Dos
 
+- make background behind img purple
 - add routing for searches (%)
 - clickable helpful widget with expandable info panels
     - About (i)

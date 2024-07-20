@@ -13,7 +13,7 @@ const App = () => {
       backgroundAttachment: 'fixed',
       backgroundSize: 'cover'
     }}>
-      <AnimatedBackground />
+      {/* <AnimatedBackground /> */}
       <PageHeader className='page-header' />
       <QueryContainer className='query-container' />
       <PageFooter className='page-footer' />

@@ -11,23 +11,23 @@ function InfoPanelHeader({ className, panelName }) {
     )
 }
 
-function InfoPanelContents({ className }) {
+function InfoPanelContents({ className, children }) {
     return (
         <div className='info-panel-contents'>
             <div className={className}>
-                <p>Panel Contents</p>
+                {children ? children : <p>Panel Contents</p>}
             </div>
         </div>
     )
 }
 
 
-function InfoPanel({ className, panelName }) {
+function InfoPanel({ className, panelName, children }) {
     return (
         <div className="info-panel">
             <div className={className}>
                 <InfoPanelHeader panelName={panelName}/>
-                <InfoPanelContents className={`${className}-contents`} />
+                <InfoPanelContents className={`${className}-contents`} children={children}/>
             </div>
         </div>
     )
