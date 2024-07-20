@@ -1,0 +1,28 @@
+hr {
+  border: none;
+  border-bottom: 0.4px solid #000;
+  margin: 0px auto;
+}
+
+/* .sequent-calculus {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+} */
+
+/* .sequent-proof {
+  display: flex;
+  align-items: center;
+} */
+
+.sequent-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.sequent {
+  margin: 0px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: italic;
+  width: fit-content;
+}

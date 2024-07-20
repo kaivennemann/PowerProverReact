@@ -27,7 +27,7 @@ function InfoPanel({ className, panelName, children }) {
         <div className="info-panel">
             <div className={className}>
                 <InfoPanelHeader panelName={panelName}/>
-                <InfoPanelContents className={`${className}-contents`} children={children}/>
+                <InfoPanelContents className={`${className}-contents`} children={children} />
             </div>
         </div>
     )
