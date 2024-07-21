@@ -1,0 +1,25 @@
+.ast {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.ast-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 50px;
+}
+
+.ast-node {
+  margin: 20px 0px;
+  font-size: x-large;
+}
+
+.connecting-line {
+  position: absolute;
+  height: 1px;
+  background-color: black;
+  transform-origin: left;
+  pointer-events: none;
+}
