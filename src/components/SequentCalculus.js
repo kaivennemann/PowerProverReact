@@ -3,10 +3,12 @@ import '../styles/SequentCalculus.css'
 
   
 function HorizontalLine({ width }) {
-    return (
-        <hr style={{
-            width: width ? width : '100px'
-        }}/>
+    return ( // TODO: figure out width
+        <hr
+            // style={{
+            //     width: width ? width : '100px'
+            // }}
+        />
     )
 }
 

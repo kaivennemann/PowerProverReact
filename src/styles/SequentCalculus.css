@@ -1,28 +1,37 @@
 hr {
   border: none;
   border-bottom: 0.4px solid #000;
-  margin: 0px auto;
+  margin: 0px;
+  width: 100%;
 }
 
-/* .sequent-calculus {
+.sequent-calculus {
   display: flex;
   align-items: center;
   flex-direction: column;
-} */
+}
 
-/* .sequent-proof {
+.sequent-proof {
+  margin: 0px 0px;
+  padding: 0px 0px; /* space between strees */
+  box-sizing: border-box;
   display: flex;
   align-items: center;
-} */
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
 
-.sequent-row {
+.sequent-proof-row {
   display: flex;
   flex-direction: row;
+  box-sizing: border-box;
+  justify-content: space-evenly;
+  gap: 20px;
 }
 
 .sequent {
-  margin: 0px;
+  margin: 0px 15px; /* extend the width of line slightly further */
+  box-sizing: border-box;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-style: italic;
-  width: fit-content;
 }

@@ -18,7 +18,7 @@ function ResultsContainer({ className }) {
 
   return (
     <div className={className}>
-        <InfoPanel className='info-panel-sequent-calculus' panelName='Sequent Calculus Proof'>
+        <InfoPanel className='info-panel-sequent-calculus' panelName='Sequent Calculus Proof' >
             <SequentCalculus proof={proof} />
         </InfoPanel>
         <InfoPanel className='info-panel-input' panelName='Input' />
