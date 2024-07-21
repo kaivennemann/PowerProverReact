@@ -13,9 +13,20 @@ function HorizontalLine({ width }) {
 }
 
 function Sequent({ text }) {
+
+    // Helper function to italicize each letter in the sequent (but not the logical symvols)
+    const italicizeLetters = (text) => {
+        return text.split('').map((c, i) => {
+            if (/[a-zA-Z]/.test(c)) {
+                return <span className='sequent-letter' key={i}>{c}</span>
+            }
+            return <span key={i}>{c}</span>
+        })
+    }
+
     return (
         <div className='sequent'>
-            {text}
+            {italicizeLetters(text)}
         </div>
     )
 }

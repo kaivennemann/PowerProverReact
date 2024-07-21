@@ -2,13 +2,17 @@ import React from 'react'
 import InfoPanel from './InfoPanel'
 import SequentCalculus from './SequentCalculus'
 
-  
+// "(P ∨ Q) → (Q ∨ P)",
+//   "(P ∨ Q) ∧ (P ∨ ¬Q)",  
+
 const proof = [
-    'A → B => !A, B', [
-        ['A → B, A => B', [
-            ['A => B, A', []],
-            ['B, A => B', []]]
-        ]
+    'A → B ⇒ ¬A ∨ B', [
+        ['A → B ⇒ ¬A, B', [
+            ['A → B, A ⇒ B', [
+                ['A ⇒ B, A', []],
+                ['b, a ⇒ b', []]
+            ]]
+        ]]
     ]
 ]
 

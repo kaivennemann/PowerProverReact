@@ -33,12 +33,3 @@ p {
   flex-direction: column;
   align-items: center;
 }
-
-
-.info-panel-sequent-calculus-contents { /* TODO: delete this section? */
-  box-sizing: border-box; /* ensures that the width includes padding and borders */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-}

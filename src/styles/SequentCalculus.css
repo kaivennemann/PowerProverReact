@@ -2,7 +2,7 @@ hr {
   border: none;
   border-bottom: 0.4px solid #000;
   margin: 0px;
-  width: 100%;
+  width: 85%;
 }
 
 .sequent-calculus {
@@ -30,8 +30,13 @@ hr {
 }
 
 .sequent {
-  margin: 0px 15px; /* extend the width of line slightly further */
+  margin: 0px 35px; /* extend the width of line slightly beyond sequent text width */
   box-sizing: border-box;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /* lucida */
+  font-style: normal;
+}
+
+.sequent-letter { /* letters within sequent should be italic */
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-style: italic;
 }
