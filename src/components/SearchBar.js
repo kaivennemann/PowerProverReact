@@ -1,21 +1,20 @@
 import React, { useState, useRef } from 'react'
+import { useNavigate } from 'react-router-dom'
 
-
-function GoButton({className}) {
-  function handleClick() {
-    alert("Clicked!")
-  }
-  return (
-    <button className={className} onClick={handleClick}>
-      ⇒
-    </button>
-  )
-}
-  
 
 function SearchBar({ className }) {
   const [inputValue, setInputValue] = useState('')
   const inputRef = useRef(null) // inputRef is set once passed to component as ref
+  const navigate = useNavigate()
+
+  function handleButtonClick() {
+    navigate(`/input?formula=${encodeURIComponent(inputValue)}`)
+  }
+
+  function handleFormSubmit(event) {
+    event.preventDefault()
+    handleButtonClick()
+  }
 
   function handleKeyDown(event) {
     const cursorPos = event.target.selectionStart
@@ -67,7 +66,7 @@ function SearchBar({ className }) {
 
   return (
     <div className={className}>
-      <form className='search-form'>
+      <form className='search-form' onSubmit={handleFormSubmit}>
         <input
           className='search-bar-input'
           type='text'
@@ -78,7 +77,9 @@ function SearchBar({ className }) {
           ref={inputRef}
         />
       </form>
-      <GoButton className='search-bar-button' />
+      <button className='search-bar-button' onClick={handleButtonClick}>
+        ⇒
+      </button>
     </div>
   )
 }

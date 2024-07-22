@@ -10,6 +10,7 @@ function Node({ text }) {
   )
 }
 
+// TODO: make more efficient; fix lag
 function ConnectingLine({ parentNode, childNode }) {
   const [lineStyle, setLineStyle] = useState({})
 
