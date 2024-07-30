@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import InfoPanel from './InfoPanel'
 import SequentCalculus from './SequentCalculus'
 import AbstractSyntaxTree from './AbstractSyntaxTree'
@@ -8,14 +8,24 @@ import { useLocation } from 'react-router-dom'
 
 const formula = '(A → B) → (¬A ∨ B)'
 
+// const proof = [
+//     'A → B ⇒ ¬A ∨ B', [
+//         ['A → B ⇒ ¬A, B', [
+//             ['A → B, A ⇒ B', [
+//                 ['A ⇒ B, A', []],
+//                 ['b, a ⇒ b', []]
+//             ]]
+//         ]]
+//     ]
+// ]
+
 const proof = [
-    'A → B ⇒ ¬A ∨ B', [
-        ['A → B ⇒ ¬A, B', [
-            ['A → B, A ⇒ B', [
-                ['A ⇒ B, A', []],
-                ['b, a ⇒ b', []]
-            ]]
-        ]]
+    " ⇒ (a → a)",
+    [
+        [
+            "a ⇒ a",
+            []
+        ]
     ]
 ]
 
@@ -35,6 +45,26 @@ function useInput() {
 
 function ResultsContainer() {
     const input = useInput().get('formula')
+    const [proofTree, setProofTree] = useState(null)
+
+    useEffect(() => {
+        console.log("Input data: ", input)
+        const url = "/sequent_proof"
+        const request = new Request(url, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ data: input.replace("→", ">") }),
+        })
+        fetch(request)
+            .then(response => response.json())
+            .then(data => {
+                console.log(data)
+                setProofTree(data["sequent_proof"])
+            })
+            .catch(error => console.error("Error: ", error));
+    }, [])
 
   // TODO: make infopanel scrollable so I can add big sequent proofs
 
@@ -66,7 +96,7 @@ function ResultsContainer() {
         </InfoPanel>
 
         <InfoPanel className='info-panel-sequent-calculus' panelName='Sequent Calculus Proof' >
-            <SequentCalculus proof={proof} />
+            {proofTree ? <SequentCalculus proof={proofTree} /> : <p>Loading proof...</p>}
         </InfoPanel>
     </div>
   )

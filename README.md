@@ -20,6 +20,8 @@ This project utilizes React.js to implement the frontend for the PowerProver[htt
 - search animation
 - query result visualization
 
+- remove proxy from package.json (just there to circumvent CORS in local testing)
+
 ## Project History
 
 
