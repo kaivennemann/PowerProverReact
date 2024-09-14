@@ -1,6 +1,8 @@
 # PowerProverReact
 
-This project utilizes React.js to implement the frontend for the PowerProver[https://github.com/kaivennemann/PowerProver] project.
+This project utilizes React.js to implement the frontend for the [PowerProver](https://github.com/kaivennemann/PowerProver) project.
+
+NOTE: This project is under construction, so documentation at the moment is limited.
 
 
 ## Design Choices
